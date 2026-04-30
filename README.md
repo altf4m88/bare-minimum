@@ -107,6 +107,8 @@ Kan tadi database nya udah mateng, coba cek contoh file `config.php`. Database d
 3. Masukkan "alamat" database: `localhost`, `root`, `""` (kosong), dan `inventory_db`.
 
 **Kenapa ini penting?** Tanpa file ini, aplikasi kita tidak bisa mengambil atau menyimpan data apa pun.
+<img width="752" height="397" alt="Screenshot 2026-04-30 at 21 33 45" src="https://github.com/user-attachments/assets/058b0ccb-ac35-4b95-8448-a31ae8395c08" />
+
 
 ---
 
