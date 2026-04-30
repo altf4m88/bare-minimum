@@ -41,35 +41,59 @@ Kemudian kita lakukan instalasi alat yang diperlukan untuk pembuatan web dasar
 
 - phpMyAdmin apaan? halaman ini buat kita bikin basis data, sebelum mulai ngoding kita perlu siapin dulu bebentukan tabel seperti apa yang akan kita pake nanti
 
+5. Install Visual Studio Code https://code.visualstudio.com/, kita nulis kode pake VS Code karena banyak extension yang nanti bisa dipake untuk mempermudah hidup
 
 ---
 
-## Langkah 1: Persiapan Database (Gudang Data)
-Aplikasi butuh tempat untuk menyimpan informasi secara permanen. Tempat ini disebut **Database**.
+## Langkah 1: Mari mulai memasak, dengan bikin Databasenya dulu
+Kenapa kudu pake database? Gunanya database itu buat naro Data secara permanen dan terstruktur, karena data yang diinput di program yang berjalan tanpa database itu hanya tersimpan sementara doang, kayak perasaan dia.
 
-1. Buka XAMPP Control Panel dan jalankan **Apache** dan **MySQL**.
-2. Buka `localhost/phpmyadmin` di browser.
-3. Klik tab **SQL** dan tempel kode ini:
+1. Buka XAMPP dan jalanin **Apache** dan **MySQL**. (kalo tadi udah ga usah di pencet lagi)
+2. Buka `localhost/phpmyadmin` di browser. (tadi juga udah dibuka kan)
+3. Klik menu "SQL" diatas
+   <img width="1470" height="661" alt="Screenshot 2026-04-30 at 20 18 00" src="https://github.com/user-attachments/assets/aff8e078-7285-40a4-ba92-992372e0e361" />
+ 
+4. Jika dilihat ada input besar untuk ngetik SQL disitu, coba masukan dulu kode berikut:
    ```sql
-   CREATE DATABASE inventory_db;
-   USE inventory_db;
+   -- Untuk membuat Database nya dulu (anggep lah kertas kosongnya dulu)
+   CREATE DATABASE inventory_db; -- nama database nya "inventory_db"
+   USE inventory_db; -- kita aktifkan Database nya, maksudnya command apapun dibawah ini akan dijalankan di kertas kosong yang baru kita buat
 
-   CREATE TABLE items (
-       id INT(11) AUTO_INCREMENT PRIMARY KEY,
-       item_name VARCHAR(100) NOT NULL,
+   CREATE TABLE items ( -- kita mulai gambar tabel nya, dikasih nama items (alias barang)
+       id INT(11) AUTO_INCREMENT PRIMARY KEY, -- ini kolom kolom di tabel yang kita gambar, ada 4 kolom
+       item_name VARCHAR(100) NOT NULL, 
        quantity INT(11) NOT NULL,
        status VARCHAR(50) NOT NULL
    );
    ```
-**Kenapa ini penting?** 
-- `TABLE` ibarat sebuah lemari arsip. 
-- `item_name`, `quantity`, dll adalah laci-laci di dalam lemari tersebut.
-- `id` dengan `AUTO_INCREMENT` memastikan setiap barang punya nomor unik otomatis (seperti nomor KTP).
+5. Kemudian klik tombol Go dipojok bawah, tujuan kode ini buat bikin database, tabel beserta kolomnya
+<img width="1228" height="445" alt="Screenshot 2026-04-30 at 20 36 56" src="https://github.com/user-attachments/assets/b4b46104-1a94-4bbc-ab46-f5f1121d69ae" />
+
+6. Loh yang tadi kode apaan? namanya SQL ( structured query language ) yaitu bahasa buat set up dan ngatur database, namanya ngobrol sama mesin itu ada aturannya, harus jelas struktur dan perintahnya makanya dibuatlah SQL.
+7. jika sudah sukses nantinya bisa kita buka database baru dan dilihat tabel buatan kita, isinya pasti masih kosongan
+<img width="1467" height="538" alt="Screenshot 2026-04-30 at 20 43 03" src="https://github.com/user-attachments/assets/66c116d9-9cc1-487e-9d52-98d53aec769f" />
+<img width="759" height="477" alt="Screenshot 2026-04-30 at 20 43 35" src="https://github.com/user-attachments/assets/487299ec-e0df-475d-9d01-cc176c9cad04" />
+
+   
+**Penjelasan Kolom** 
+1. Sama aja kayak gambar tabel diatas kertas kita pasti gambar kolom
+2. cara nulis kolom itu "{nama_kolom} {tipe_data} {atrribut (bisa lebih dari satu)}"
+3. maksudnya begimana? coba lihat kolom `id INT(11) AUTO_INCREMENT PRIMARY KEY,`
+   - "id" itu nama kolomnya,
+   - INT(11) artinya kolom ini tipenya integer dengan panjang 11 (angka, panjang maksimal 11 contohnya 1, 2, 12345678911)
+   - AUTO_INCREMENT ini atribut khusus, artinya kolom ini akan secara otomatis melakukan increment (penambahan / +1),
+   - PRIMARY KEY ini artinya id ini sebagai kunci unik, anggep lah NIK nya di KTP mah, kan tiap orang beda beda, jadi ga boleh ada nilai yang sama di kolom ini.
+4. mari kita lihat kolom lain: `item_name VARCHAR(100) NOT NULL,`
+   - item_name ini nama kolom kedua
+   - VARCHAR(100) ini artinya kolom ini bisa menyimpan karakter apa saja, mau teks atau angka, misal "Fuad 69", panjang maksimal nya 100 karakter
+   - NOT NULL ini atribut yang artinya kolom ini wajib diisi (tidak NULL atau kosong), nilainya wajib selalu kita input
+   - notis kita ga pake PRIMARY KEY lagi disini? ya karena Primary Key hanya boleh ada satu, ga boleh ada 2 kolom yang jadi kunci utama.
+5. Sisa kolom lainnya bisa coba definisikan sendiri dengan cara diatas, jika sudah paham pasti mudah menentukan kolom apa yang dibutuhkan.
 
 ---
 
-## Langkah 2: Membuat File Koneksi (`config.php`)
-PHP adalah bahasa pemrograman, dan MySQL adalah database. Mereka adalah dua entitas berbeda yang perlu "berbicara" satu sama lain.
+## Langkah 2: Menyambungkan database ke aplikasi web
+Database nya udah mateng
 
 **Analogi:** `config.php` adalah kabel telepon yang menghubungkan kantor (PHP) dengan gudang (Database).
 
