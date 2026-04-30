@@ -95,8 +95,11 @@ Kenapa kudu pake database? Gunanya database itu buat naro Data secara permanen d
 
 ---
 
-## Langkah 2: Menyambungkan database ke aplikasi web
-Database nya udah mateng, coba cek file `config.php`. Database dan Aplikasi itu dua hal terpisah, mereka perlu perantara buat "ngobrol", gunanya file ini untuk menyambungkan silaturahmi keduanya.
+## Langkah 2: Mulai buat file dan menyambungkan database ke aplikasi web
+Untuk ngoding di PHP pake MySQL ada aturan khusus, yaitu lokasi kita ngetik kodenya.
+kode wajib ditulis di folder XAMPP/htdocs (hayo masih inget ga tadi install dimana?), didalem htdocs buat folder baru, misal namanya 'bnsp-preps', nama folder ini nantinya tempat semua nulis kode kode PHP nya. pertama tama kita bikin konfigurasi database nya dulu.
+
+Kan tadi database nya udah mateng, coba cek contoh file `config.php`. Database dan Aplikasi itu dua hal terpisah, mereka perlu perantara buat "ngobrol", gunanya file ini untuk menyambungkan silaturahmi keduanya.
 
 **Langkah:**
 1. Buat file `config.php`.
@@ -116,6 +119,8 @@ Halaman ini adalah wajah utama aplikasi di mana user bisa melihat isi "gudang".
 3. Gunakan **Looping (while)**: Ini ibarat menyuruh komputer: *"Selama masih ada barang di gudang, tolong tuliskan namanya di baris tabel ini."*
 
 **Kenapa ini penting?** Ini mengajarkan konsep **Read** (Membaca data) dan bagaimana menampilkan data dari database ke layar user.
+
+** semisal udah beres bikin file index, coba buka `http://localhost/bnsp-preps/index.php`, "bnsp-preps" ini sesuai nama folder yang dibuat di htdocs tadi, jika berhasil harusnya nanti akan muncul tampilan seperti ini:
 <img width="1470" height="816" alt="Screenshot 2026-04-30 at 21 11 08" src="https://github.com/user-attachments/assets/49a39dc3-fa7c-447f-b3e5-e22bff3bec8c" />
 
 
