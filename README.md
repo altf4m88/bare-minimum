@@ -116,6 +116,8 @@ Halaman ini adalah wajah utama aplikasi di mana user bisa melihat isi "gudang".
 3. Gunakan **Looping (while)**: Ini ibarat menyuruh komputer: *"Selama masih ada barang di gudang, tolong tuliskan namanya di baris tabel ini."*
 
 **Kenapa ini penting?** Ini mengajarkan konsep **Read** (Membaca data) dan bagaimana menampilkan data dari database ke layar user.
+<img width="1470" height="816" alt="Screenshot 2026-04-30 at 21 11 08" src="https://github.com/user-attachments/assets/49a39dc3-fa7c-447f-b3e5-e22bff3bec8c" />
+
 
 ---
 
@@ -127,7 +129,9 @@ Ini adalah pintu masuk data baru ke gudang.
 2. **Analogi POST:** Seperti mengirim surat di dalam amplop tertutup (aman dan bisa bawa banyak data).
 3. Tangkap isi input dengan variabel PHP seperti `$_POST['item_name']`.
 
-**Kenapa ini penting?** Mengajarkan konsep **Input** dan bagaimana PHP memproses data yang diketik oleh manusia di browser.
+**Kenapa ini penting?** Mengajarkan konsep **Create** dan bagaimana PHP memproses data yang diketik oleh manusia di browser.
+<img width="1470" height="847" alt="Screenshot 2026-04-30 at 21 12 09" src="https://github.com/user-attachments/assets/2b3d18bd-5927-4355-9d9d-439746f37371" />
+<img width="1466" height="813" alt="Screenshot 2026-04-30 at 21 12 18" src="https://github.com/user-attachments/assets/5a69eacc-67a6-4072-bfda-4292aebfca9a" />
 
 ---
 
@@ -140,6 +144,7 @@ Kadang kita salah input atau stok barang berubah. Di sini kita belajar cara memp
 3. Kirim perubahan dengan perintah `UPDATE`.
 
 **Kenapa ini penting?** Ini adalah langkah tersulit bagi pemula karena melibatkan proses mengambil data lama, menampilkannya, lalu menyimpannya kembali sebagai data baru.
+<img width="1470" height="802" alt="Screenshot 2026-04-30 at 21 12 36" src="https://github.com/user-attachments/assets/bfbc12b5-a0ae-428a-8d49-12ba6601d73b" />
 
 ---
 
@@ -153,11 +158,19 @@ Menghapus data yang sudah tidak diperlukan.
 
 ---
 
-## Tips Mengajar untuk Pemula (Zero Concept):
-1. **Semicolon (;):** Ingatkan bahwa ini seperti titik di akhir kalimat. Tanpa titik, komputer akan bingung kapan kalimat berakhir.
-2. **Dollar Sign ($):** Variabel (seperti `$name`) adalah sebuah kotak label. Kita bisa memasukkan apa saja ke dalam kotak tersebut.
+## Tips untuk Pemula:
+1. **Semicolon (;):** titik koma di bahasa PHP itu wajib, sama aja kayak tanda titik diakhir kata, sebagai tanda kalo baris tersebut udah beres
+2. **Dollar Sign ($):** Variabel (seperti `$name`) gunanya untuk nampung data, anggep aja kotak kosong, nanti isinya bisa macem macem seuai yang kita kasih misal `$name = 'abdul sigma'` artinya kotak kosong tadi diisi kata 'abdul sigma'.
 3. **Case Sensitive:** Huruf besar dan kecil berpengaruh. `item_name` tidak sama dengan `Item_Name`.
-4. **Error adalah Teman:** Jika muncul layar putih atau pesan error, jangan panik. Itu cara komputer memberitahu di baris mana kita "salah ketik".
+4. **Error adalah Teman:** kalo error jangan nangis, apapun yang terjadi tetap bernafas, baca dengan seksama karena didalem sebuah error itu ada informasi, ada clue kita salahnya dimana. Tengok error dibawah ini:
+
+<img width="1030" height="199" alt="Screenshot 2026-04-30 at 21 16 53" src="https://github.com/user-attachments/assets/2e90ad61-fd2e-408a-9def-4fd6bf0df337" />
+* `Warning: mysqli_connect()` berarti ada masalah di fungsi saat menyambungkan ke database
+* `No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/bnsp-preps/config.php on line 13` disini jelas sekali file yang bermasalah itu config.php baris ke 13, ada apa di baris tersebut?
+* baris 13 isinya `$conn = mysqli_connect($host, $user, $pass, $db);` oke sesuai point pertama errornya di koneksi, apa yang salah? apakah host, user, pass dan db nya sudah benar? atau apakah server mysql nya mati?
+* dalem case diatas, server MySQL nya mati oleh karena itu koneksinya gagal, cukup dinyalain lagi aja, langsung nyambung.
+<img width="692" height="276" alt="Screenshot 2026-04-30 at 21 20 13" src="https://github.com/user-attachments/assets/4a041629-fccf-4333-8647-658a78aebaa5" />
+
 
 ---
 
