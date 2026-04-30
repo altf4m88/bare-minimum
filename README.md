@@ -1,15 +1,46 @@
-# Panduan Lengkap Pembuatan Aplikasi CRUD Inventaris (BNSP)
-
-Dokumen ini dirancang khusus untuk pengajar dan siswa yang baru memulai belajar pemrograman. Kita akan membangun aplikasi manajemen inventaris menggunakan PHP Native dan MySQL.
+Intinya cuma program dan tutorial simpel untuk buat aplikasi web CRUD dasar (banget), untuk menjadi referensi
 
 ---
 
-## Konsep Dasar: Apa itu CRUD?
-Sebelum mulai, penting untuk memahami bahwa hampir semua aplikasi di dunia (Instagram, WhatsApp, Tokopedia) bekerja dengan prinsip **CRUD**:
+## CRUD apaan emang?
 - **C**reate: Menambahkan data baru (seperti posting foto).
 - **R**ead: Menampilkan data (seperti melihat feed).
 - **U**pdate: Mengubah data (seperti edit caption).
 - **D**elete: Menghapus data (seperti hapus postingan).
+
+4 konsep dasar operasi aplikasi pada umumnya
+
+
+---
+
+## Langkah 0: Niat, Doa, Usaha dan Instalasi tools
+Pertama, silahkan baca bismillah (atau sesuai kepercayaan masing masing),
+Kemudian kita lakukan instalasi alat yang diperlukan untuk pembuatan web dasar
+
+1. Install XAMPP, download disini: https://www.apachefriends.org/
+   download sesuai sistem operasi masing masing
+   <img width="1470" height="584" alt="Screenshot 2026-04-30 at 14 41 46" src="https://github.com/user-attachments/assets/bb87d6d3-a6a1-4207-aec7-33707404a812" />
+
+2. Selesai di download tinggal next next dan yes aja semuanya sampai kebuka menu yang berisi Apache, mysql dan kawan kawan
+   tampilan di windows
+   <img width="668" height="434" alt="image" src="https://github.com/user-attachments/assets/e588cb4b-9f9f-470b-a375-8c7a5e9133d2" />
+
+   tampilan di MacOS
+   <img width="668" height="484" alt="Screenshot 2026-04-30 at 14 43 47" src="https://github.com/user-attachments/assets/aae6001e-ed6d-4328-8de7-71610bad324a" />
+
+3. Klik tombol start disamping modul Apache dan MySQL (seperti di gambar), jikalau berubah jadi hijau artinya instalasi sudah berhasil dan XAMPP siap digunakan. Kalo belum ijo? klik lagi dan tunggu sampe bisa atau bisa tanyakan kepada ahli(*) karena mungkin terjadi kesalahan atau perbedaan konfigurasi di lapropnya
+
+* XAMPP apaan? XAMPP sebenernya kayak aplikasi perkumpulan alat alat yang dibutuhkan untuk pemrograman web
+* Isi XAMPP ada PHP, Apache, MySQL dan alat lain yang ga penting untuk sekarang
+* PHP apaan? pemberi harapan palsu? PHP itu bahasa pemrograman yang kita pake buat bikin program web
+* Apache? simpelnya gini, website itu butuh server untuk jalan, Apache ini ibaratnya server yang dipasang di laptop kita untuk jalanin program web nya
+* MySQL? apkh ini MyBini? nahh MySQL ini intinya basis data atau tempat kita nyimpen data dari program web nya. Data di MySQL ini disimpen dalam bentuk tabel yang isinya ada baris dan kolom
+
+4. Kalo udah start silahkan buka link ini di browser masing masing: http://localhost/phpmyadmin/ nantinya akan muncul halaman phpMyAdmin
+<img width="1470" height="621" alt="Screenshot 2026-04-30 at 14 54 22" src="https://github.com/user-attachments/assets/c38c0806-5819-4f13-abe1-2e016cb11a28" />
+
+* phpMyAdmin apaan? halaman ini buat kita bikin basis data, sebelum mulai ngoding kita perlu siapin dulu bebentukan tabel seperti apa yang akan kita pake nanti
+
 
 ---
 
