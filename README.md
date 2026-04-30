@@ -42,6 +42,9 @@ Kemudian kita lakukan instalasi alat yang diperlukan untuk pembuatan web dasar
 - phpMyAdmin apaan? halaman ini buat kita bikin basis data, sebelum mulai ngoding kita perlu siapin dulu bebentukan tabel seperti apa yang akan kita pake nanti
 
 5. Install Visual Studio Code https://code.visualstudio.com/, kita nulis kode pake VS Code karena banyak extension yang nanti bisa dipake untuk mempermudah hidup
+<img width="1470" height="798" alt="Screenshot 2026-04-30 at 21 01 55" src="https://github.com/user-attachments/assets/e34e55da-8faf-435d-93e6-867deda5a3a4" />
+<img width="1190" height="797" alt="Screenshot 2026-04-30 at 21 02 09" src="https://github.com/user-attachments/assets/5884aa0f-3c4b-4922-9239-af40a9504fa6" />
+
 
 ---
 
