@@ -93,9 +93,7 @@ Kenapa kudu pake database? Gunanya database itu buat naro Data secara permanen d
 ---
 
 ## Langkah 2: Menyambungkan database ke aplikasi web
-Database nya udah mateng
-
-**Analogi:** `config.php` adalah kabel telepon yang menghubungkan kantor (PHP) dengan gudang (Database).
+Database nya udah mateng, coba cek file `config.php`. Database dan Aplikasi itu dua hal terpisah, mereka perlu perantara buat "ngobrol", gunanya file ini untuk menyambungkan silaturahmi keduanya.
 
 **Langkah:**
 1. Buat file `config.php`.
