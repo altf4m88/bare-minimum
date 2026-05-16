@@ -1,19 +1,16 @@
 <?php
-/**
- * DOKUMENTASI: Membuat koneksi ke database MySQL lokal
- * File ini adalah "Reusable Subroutine" yang disertakan dalam file lain untuk akses database.
- */
+$host = getenv('DB_HOST') ?: 'localhost';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASS') ?: 'root';
+$db = getenv('DB_NAME') ?: 'event_ticketing_db';
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "inventory_db";
-
-// Membangun koneksi menggunakan mysqli_connect
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-// DEBUGGING: Memeriksa apakah koneksi berhasil
 if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+    die('Koneksi database gagal: ' . mysqli_connect_error());
+}
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
 ?>
