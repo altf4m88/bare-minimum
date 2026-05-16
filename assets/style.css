@@ -1,0 +1,11 @@
+body {
+    background: #f6f8fa;
+}
+
+.card-event {
+    min-height: 100%;
+}
+
+.badge-status {
+    font-size: 0.85rem;
+}
